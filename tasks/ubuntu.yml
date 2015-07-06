@@ -6,3 +6,11 @@
 - name: remove webupd8 team java ppa (for oracle java)
   apt_repository: repo='ppa:webupd8team/java' state=absent
   when: java_cleanup and not java_needs_oracle
+
+- name: install OpenJDK builds ppa (for openjdk 8)
+  apt_repository: repo='ppa:openjdk-r/ppa' state=present
+  when: java_needs_openjdk8
+
+- name: remove OpenJDK builds ppa (for openjdk8)
+  apt_repository: repo='ppa:openjdk-r/ppa' state=absent
+  when: java_cleanup and not java_needs_openjdk8

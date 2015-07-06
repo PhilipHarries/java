@@ -1,4 +1,4 @@
 ---
 java_packages:
-  - openjdk-7-jre
+  - openjdk-7-jre-headless
 java_cleanup: true

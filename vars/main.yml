@@ -1,2 +1,3 @@
 ---
 java_needs_oracle: "{{ java_packages | join | search('oracle') }}"
+java_needs_openjdk8: "{{ java_packages | join | search('openjdk-8') }}"

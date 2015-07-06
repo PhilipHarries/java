@@ -11,10 +11,16 @@ java_packages_full:
   #- openjdk-6-jre-zero:i386
   - openjdk-7-jdk
   - openjdk-7-jdk:i386
-  #- openjdk-7-jre
-  #- openjdk-7-jre:i386
-  #- openjdk-7-jre-headless
-  #- openjdk-7-jre-headless:i386
+  - openjdk-7-jre
+  - openjdk-7-jre:i386
+  - openjdk-7-jre-headless
+  - openjdk-7-jre-headless:i386
   #- openjdk-7-jre-zero
   #- openjdk-7-jre-zero:i386
+  - openjdk-8-jdk
+  - openjdk-8-jdk:i386
+  - openjdk-8-jre
+  - openjdk-8-jre:i386
+  - openjdk-8-jre-headless
+  - openjdk-8-jre-headless:i386
 java_packages_to_remove: "{{ java_packages_full | difference(java_packages) }}"
